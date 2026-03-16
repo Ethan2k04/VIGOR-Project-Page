@@ -186,53 +186,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
   <section class="hero">
@@ -255,13 +208,13 @@
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Tengjiao Yin</a><sup>1</sup>,</span>
+                <a href="https://www.ethan2k04.icu/" target="_blank">Tengjiao Yin</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Jinglei Shi</a><sup>1</sup>,</span>
+                <a href="https://jingleishi.github.io/" target="_blank">Jinglei Shi</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Heng Guo</a><sup>2</sup>,</span>
+                <a href="https://gh-home.github.io/" target="_blank">Heng Guo</a><sup>2</sup>,</span>
               <span class="author-block">
-                <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Xi Wang</a><sup>3</sup></span>
+                <a href="https://triocrossing.github.io/" target="_blank">Xi Wang</a><sup>3</sup></span>
                   </div>
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
@@ -376,7 +329,7 @@
         <div class="content has-text-justified">
           <p>
             <!-- TODO: 在这里写你的方法描述 -->
-            Your method description here.
+            Our VIGOR framework consists of two components: (a) Geometric-Based Reward Model: a geometry-aware sampling (GAS) module leverages the global attention of VGGT to identify salient patches, and a reward module computes cross-frame pointwise reprojection error; (b) Geometric Preference Alignment: the model is aligned either via SFT and DPO on a bidirectional model, or test-time scaling (TTS) with our reward as a path verifier on a causal model. For TTS, we introduce three complementary search strategies to efficiently explore the inference-time search space, including Search on Start (SoS), Search on Path (SoP), and Beam Search (BS or Top-K).
           </p>
         </div>
 
@@ -397,119 +350,386 @@
 <!-- End Method Section -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
+<!-- Video Comparison Carousel -->
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Video Results</h2>
+
+      <div class="content has-text-justified" style="max-width: 800px; margin: 0 auto 2rem;">
+        <p>
+          We compare videos generated with and without VIGOR across diverse scenes. Without VIGOR, generated videos frequently exhibit geometric artifacts such as spatial drift, object deformation, depth violations, and abrupt structural changes. With VIGOR, these inconsistencies are substantially mitigated, yielding temporally stable and geometrically coherent video outputs.
+        </p>
+      </div>
+
+      <div id="comparison-carousel" class="carousel results-carousel">
+
+        <!-- Slide 1 -->
+        <div class="item">
+          <div class="columns is-centered" style="margin:0;">
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/bad/prompt00002_seed06.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/good/prompt00002_seed07.mp4" type="video/mp4">
+              </video>
+              <p class="prompt-text">"Medium shot of a warmly lit hallway with hardwood floors. Camera dollies out. Camera dolly reveals a dark wooden console table adorned with two ornate vases ..."</p>
+            </div>
           </div>
+          <p class="comparison-caption">W/O VIGOR, artifacts like spatial drift and object merging/splitting constantly occur; <br> W/ VIGOR, the geometry is significantly improved.</p>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="item">
+          <div class="columns is-centered" style="margin:0;">
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/bad/prompt00528_seed04.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/good/prompt00528_seed01.mp4" type="video/mp4">
+              </video>
+              <p class="prompt-text">"Close-up shot of a large blue-and-white floral canvas hanging on a wall. Camera pan reveals a narrow hallway with tiled floors, white doors, and a glimpse into a laundry room ..."</p>
+            </div>
+          </div>
+          <p class="comparison-caption">W/O VIGOR, abrupt room transitions cause visual inconsistencies；<br> W/ VIGOR, the transitions are smoother and more visually consistent.</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="item">
+          <div class="columns is-centered" style="margin:0;">
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/bad/prompt01445_seed04.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/good/prompt01445_seed01.mp4" type="video/mp4">
+              </video>
+              <p class="prompt-text">"Close-up shot of the stone base and bare winter trees in front of St. Paul's Cathedral. Camera tilts up. Camera tilt reveals the grand neoclassical facade, towering columns, and the majestic dome ..."</p>
+            </div>
+          </div>
+          <p class="comparison-caption">W/O VIGOR, object deformation and depth violation severely damage the geometric consistency;<br> W/ VIGOR, the object's 3D shape is stable and consistent throughout the video clip.</p>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="item">
+          <div class="columns is-centered" style="margin:0;">
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/bad/prompt01663_seed06.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/good/prompt01663_seed03.mp4" type="video/mp4">
+              </video>
+              <p class="prompt-text">"Overhead shot of a classic red British telephone box standing on a sunlit stone sidewalk. Behind it, a grand white stone building with ornate brickwork rises ..."</p>
+            </div>
+          </div>
+          <p class="comparison-caption">W/O VIGOR, the static object moves uncontrollably when it should stay still;<br> W/ VIGOR, the object remains stable and consistent.</p>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="item">
+          <div class="columns is-centered" style="margin:0;">
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/bad/prompt01880_seed08.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/good/prompt01880_seed02.mp4" type="video/mp4">
+              </video>
+              <p class="prompt-text">"Close-up shot of the Gateway Arch's gleaming steel curve against a clear blue sky. Camera pans right. Camera pan reveals the St. Louis skyline framed by the arch's silhouette ..."</p>
+            </div>
+          </div>
+          <p class="comparison-caption">W/O VIGOR, abrupt structural emergence and disappearance introduce implausible artifacts;<br> W/ VIGOR, such geometric inconsistencies are substantially mitigated.</p>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="item">
+          <div class="columns is-centered" style="margin:0;">
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/bad/prompt02406_seed03.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column has-text-centered" style="padding: 0.5rem;">
+              <p class="video-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" style="width:100%; border-radius:8px;">
+                <source src="static/videos/best-of-N/good/prompt02406_seed07.mp4" type="video/mp4">
+              </video>
+              <p class="prompt-text">"A grand neoclassical triumphal arch rises under a clear blue sky, flanked by lush green trees and manicured hedges ... the camera follows a single person weaving through the crowd in a long tracking shot ..."</p>
+            </div>
+          </div>
+          <p class="comparison-caption">Our methods can generalize to dynamic scene where foreground objects are moving while background architecture remains stable and consistent.</p>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End Video Comparison Carousel -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
+<!-- 3D Reconstruction Results Section -->
+<section class="section">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">3D Reconstruction Results</h2>
+      <div class="content has-text-justified" style="max-width: 800px; margin: 0 auto 2rem;">
+        <p>
+          We further evaluate geometry quality by comparing 3D reconstructions from videos generated with and without VIGOR. The point clouds below are reconstructed from the respective video outputs and rendered as 360° rotations.
+        </p>
+      </div>
+
+      <div id="recon-carousel" class="carousel results-carousel">
+
+        <!-- Slide 1 -->
+        <div class="item">
+          <div class="recon-grid">
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/bad/prompt00360_seed09.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">3D Reconstruction (Bad)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/bad/prompt00360_seed09_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/good/prompt00360_seed08.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">3D Reconstruction (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/good/prompt00360_seed08_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <p class="recon-prompt-text">"Close-up shot of a sleek black TV mounted on a textured stone wall. Camera pans Pan left. Camera pan reveals a cozy living room with hardwood floors, a plush armchair, and a white ottoman beside a stone fireplace ..."</p>
+          <p class="comparison-caption">VIGOR's geometry-based reward leads to a coherent sceen transition.</p>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
+
+        <!-- Slide 2 -->
+        <div class="item">
+          <div class="recon-grid">
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/bad/prompt00418_seed06.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">3D Reconstruction (Bad)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/bad/prompt00418_seed06_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/good/prompt00418_seed03.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">3D Reconstruction (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/good/prompt00418_seed03_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <p class="recon-prompt-text">"Medium shot of a modern bathroom with light gray walls. Camera dollies out. Camera dolly reveals a dark wood vanity with beige countertop, large mirror, framed artwork, and a corner jetted tub ..."</p>
+          <p class="comparison-caption">VIGOR's geometry-based reward leads to a stable and consistent geometry structure.</p>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+
+        <!-- Slide 3 -->
+        <div class="item">
+          <div class="recon-grid">
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/bad/prompt01037_seed01.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">3D Reconstruction (Bad)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/bad/prompt01037_seed01_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/good/prompt01037_seed00.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">3D Reconstruction (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/good/prompt01037_seed00_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <p class="recon-prompt-text">"Close-up shot of the Eiffel Tower’s intricate iron lattice at its base. Camera tilts down. Camera tilt reveals the full grandeur of the iconic structure rising against a soft blue sky ..."</p>
+          <p class="comparison-caption">VIGOR's geometry-based reward leads to a physically plausible 3D reconstruction.</p>
         </div>
+
+        <!-- Slide 4 -->
+        <div class="item">
+          <div class="recon-grid">
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/bad/prompt01391_seed06.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">3D Reconstruction (Bad)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/bad/prompt01391_seed06_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/good/prompt01391_seed07.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">3D Reconstruction (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/good/prompt01391_seed07_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <p class="recon-prompt-text">"Overhead shot of the historic Blue Mosque in Istanbul, its twin minarets piercing a soft blue sky. The grand domed structure is framed by modern billboards and streetlights, with a metal fence and road in the foreground ..."</p>
+          <p class="comparison-caption">VIGOR's geometry-based reward mitigate sudden geometric changes (e.g. the minarets).</p>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="item">
+          <div class="recon-grid">
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/bad/prompt01481_seed01.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">3D Reconstruction (Bad)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/bad/prompt01481_seed01_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/good/prompt01481_seed09.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">3D Reconstruction (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/good/prompt01481_seed09_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <p class="recon-prompt-text">"Close-up shot of rippling water near submerged rocks in the foreground. Camera tilts Tilt up. Camera tilt reveals the majestic red-orange Golden Gate Bridge stretching across the bay ..."</p>
+          <p class="comparison-caption">VIGOR's geometry-based reward avoid abrupt appearance/disappearance of geometric structures.</p>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="item">
+          <div class="recon-grid">
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">Bad Geometry</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/bad/prompt01698_seed03.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label bad-label">3D Reconstruction (Bad)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/bad/prompt01698_seed03_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">Improved Geometry (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/best-of-N/good/prompt01698_seed07.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="recon-cell">
+              <p class="video-label recon-label good-label">3D Reconstruction (Ours)</p>
+              <video controls muted loop autoplay preload="metadata" class="recon-video">
+                <source src="static/videos/recon/good/prompt01698_seed07_rotation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <p class="recon-prompt-text">"Wide shot of London’s Parliament and Big Ben under dramatic clouds. Camera dollies Dolly in revealing Gothic spires, the Union Jack fluttering, clock faces glowing, and Westminster Bridge’s arches framing the Thames ..."</p>
+          <p class="comparison-caption">VIGOR's geometry-based reward promotes stable geometric features (e.g. the number of clock towers).</p>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End 3D Reconstruction Results Section -->
 
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  bulmaCarousel.attach('#comparison-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    navigation: true,
+    pagination: true,
+    effect: 'translate',
+  });
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+  bulmaCarousel.attach('#recon-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    pauseOnHover: true,
+    navigation: true,
+    pagination: true,
+    effect: 'translate',
+  });
+});
+</script>
 
 
 <!--BibTex citation -->

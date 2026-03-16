@@ -263,16 +263,19 @@ body {
   overflow: hidden;
   padding: 1.5rem;
   font-size: 0;
-  background: var(--background-primary);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-  border: 1px solid var(--border-color);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
 }
 
 .results-carousel .item:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
 }
 
 .results-carousel .item img,
@@ -749,5 +752,166 @@ a:focus {
   }
 }
 
+/* Video Comparison Carousel */
+.video-comparison-carousel {
+  position: relative;
+  padding: 0 3rem;
+}
 
+.comparison-slide {
+  display: none;
+}
 
+.comparison-slide.active {
+  display: block;
+}
+
+.video-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.prompt-text {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-primary);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.comparison-caption {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(50, 50, 50, 0.75);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: rgba(30, 30, 30, 0.95);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: var(--text-primary);
+}
+
+/* 3D Reconstruction Results Section */
+.recon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.75rem;
+  width: 100%;
+  /* 关键：撑满 carousel item，不受其他样式干扰 */
+  box-sizing: border-box;
+}
+
+.recon-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0; /* 防止 grid 子项溢出 */
+}
+
+.recon-video {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  background: #000;
+  display: block;
+}
+
+.recon-label {
+  margin-bottom: 0.4rem !important;
+  font-size: 0.95rem;
+}
+
+.bad-label {
+  color: #ef4444;
+}
+
+.good-label {
+  color: #10b981;
+}
+
+/* 上下两行之间的分隔线 */
+.recon-grid .recon-cell:nth-child(1),
+.recon-grid .recon-cell:nth-child(2) {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.recon-grid .recon-cell:nth-child(3),
+.recon-grid .recon-cell:nth-child(4) {
+  padding-top: 0.75rem;
+}
+
+.recon-prompt-text {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Mobile: 单列堆叠 */
+@media screen and (max-width: 768px) {
+  .recon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recon-grid .recon-cell:nth-child(1),
+  .recon-grid .recon-cell:nth-child(2) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .recon-grid .recon-cell:nth-child(3),
+  .recon-grid .recon-cell:nth-child(4) {
+    padding-top: 0;
+  }
+}
