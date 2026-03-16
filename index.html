@@ -195,11 +195,14 @@
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
             <style>
-            .vl { font-weight: 900; background: linear-gradient(135deg, #f4a57a, #f2c4a0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .il { font-weight: 900; background: linear-gradient(135deg, #f2c4a0, #f4a57a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .gl { font-weight: 900; background: linear-gradient(135deg, #a8c8e8, #b8d4f0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .ol { font-weight: 900; background: linear-gradient(135deg, #b8d4f0, #c8e0f8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .rl { font-weight: 900; background: linear-gradient(135deg, #c8e0f8, #a8c8e8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            /* VI — 鲜艳橙色，从深橙到亮橙 */
+            .vl { font-weight: 900; background: linear-gradient(135deg, #ff6b00, #ff9a3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .il { font-weight: 900; background: linear-gradient(135deg, #ff9a3c, #ff6b00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+            /* GOR — 鲜艳蓝色，从深蓝到亮蓝 */
+            .gl { font-weight: 900; background: linear-gradient(135deg, #1a6fd4, #4aa8ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .ol { font-weight: 900; background: linear-gradient(135deg, #4aa8ff, #1a6fd4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .rl { font-weight: 900; background: linear-gradient(135deg, #1a6fd4, #4aa8ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
             </style>
 
             <h1 class="title is-1 publication-title" style="font-size: 2.8rem; line-height: 1.3;">
@@ -230,8 +233,8 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
+                    <!-- TODO: Update with your arXiv paper ID -->
+                    <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -239,10 +242,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -250,28 +253,39 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                  <!-- <span class="link-block">
+                      <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span> -->
 
                 <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
-                </a>
+                </a> -->
+
+                <!-- Dataset 链接 -->
+                <span class="link-block">
+                  <a href="https://YOUR_DATASET_URL" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-images"></i>  <!-- 数据集用图片图标 -->
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+                </span>
               </span>
             </div>
           </div>
@@ -286,15 +300,15 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Video Demo of VIGOR: Our geometry-based reward model significantly improves the geometric consistency of generated videos, mitigating artifacts like spatial drift, object deformation, abrupt scene transition, depth violations, and physically implausible perspective changes.
       </h2>
+      <!-- TODO: Replace with your teaser video -->
+      <video poster="" id="tree" autoplay controls loop height="100%" preload="metadata">
+        <!-- TODO: Add your video file path here -->
+        <source src="static/videos/VIGOR_demo.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
@@ -733,23 +747,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-header">
+      <h2 class="title">BibTeX</h2>
+      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+        <i class="fas fa-copy"></i>
+        <span class="copy-text">Copy</span>
+      </button>
     </div>
+      <pre id="bibtex-code"><code>
+        @article{YourPaperKey2024,
+          title={Your Paper Title Here},
+          author={First Author and Second Author and Third Author},
+          journal={Conference/Journal Name},
+          year={2024},
+          url={https://your-domain.com/your-project-page}
+        }
+    </code></pre>
+  </div>
+</section> -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-header">
+      <h2 class="title">BibTeX</h2>
+      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+        <i class="fas fa-copy"></i>
+        <span class="copy-text">Copy</span>
+      </button>
+    </div>
+      <pre id="bibtex-code"><code>
+        comming soon ...
+    </code></pre>
+  </div>
 </section>
 <!--End BibTex citation -->
 
