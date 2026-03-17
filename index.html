@@ -195,18 +195,23 @@
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
             <style>
-            /* VI — 鲜艳橙色，从深橙到亮橙 */
-            .vl { font-weight: 900; background: linear-gradient(135deg, #ff6b00, #ff9a3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .il { font-weight: 900; background: linear-gradient(135deg, #ff9a3c, #ff6b00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            /* VI — 天蓝，从深蓝到亮蓝 */
+            .vl { font-weight: 900; background: linear-gradient(135deg, #01579b, #0288d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .il { font-weight: 900; background: linear-gradient(135deg, #0288d1, #29b6f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-            /* GOR — 鲜艳蓝色，从深蓝到亮蓝 */
-            .gl { font-weight: 900; background: linear-gradient(135deg, #1a6fd4, #4aa8ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .ol { font-weight: 900; background: linear-gradient(135deg, #4aa8ff, #1a6fd4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .rl { font-weight: 900; background: linear-gradient(135deg, #1a6fd4, #4aa8ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            /* GOR — 琥珀橙，从深橙到亮橙 */
+            .gl { font-weight: 900; background: linear-gradient(135deg, #e65100, #ef6c00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .ol { font-weight: 900; background: linear-gradient(135deg, #ef6c00, #ffa726); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .rl { font-weight: 900; background: linear-gradient(135deg, #ffa726, #ef6c00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
             </style>
 
-            <h1 class="title is-1 publication-title" style="font-size: 2.8rem; line-height: 1.3;">
-              <span class="vl">V</span><span class="il">I</span><span class="gl">G</span><span class="ol">O</span><span class="rl">R</span>: <span class="vl">V</span><span class="il">I</span>deo <span class="gl">G</span>eometry-<span class="ol">O</span>riented <span class="rl">R</span>eward for Temporal Generative Alignment
+            <h1 class="title is-1 publication-title" style="line-height: 1.3;">
+              <span style="font-size: 2.8rem; display: block;">
+                <span class="vl">V</span><span class="il">I</span><span class="gl">G</span><span class="ol">O</span><span class="rl">R</span>: <span class="vl">V</span><span class="il">I</span>deo <span class="gl">G</span>eometry-<span class="ol">O</span>riented <span class="rl">R</span>eward
+              </span>
+              <span style="font-size: 2.8rem; display: block;">
+                for Temporal Generative Alignment
+              </span>
             </h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
@@ -278,10 +283,10 @@
 
                 <!-- Dataset 链接 -->
                 <span class="link-block">
-                  <a href="https://YOUR_DATASET_URL" target="_blank"
+                  <a href="https://huggingface.co/datasets/Ethan2k04/GB3DV-25k" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="far fa-images"></i>  <!-- 数据集用图片图标 -->
+                    <i class="fas fa-database"></i>
                   </span>
                   <span>Dataset</span>
                   </a>
@@ -302,7 +307,7 @@
     <div class="hero-body">
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        Video Demo of VIGOR: Our geometry-based reward model significantly improves the geometric consistency of generated videos, mitigating artifacts like spatial drift, object deformation, abrupt scene transition, depth violations, and physically implausible perspective changes.
+        <strong>Video Demo of VIGOR</strong>: Our geometry-based reward model significantly improves the geometric consistency of generated videos, mitigating artifacts like spatial drift, object deformation, abrupt scene transition, depth violations, and physically implausible perspective changes.
       </h2>
       <!-- TODO: Replace with your teaser video -->
       <video poster="" id="tree" autoplay controls loop height="100%" preload="metadata">
