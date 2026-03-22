@@ -906,3 +906,133 @@ a:focus {
     padding-top: 0;
   }
 }
+
+/* ============================================
+   TTS Scaling Results Section — 追加到 index.css 末尾
+   ============================================ */
+
+.tts-slide-title {
+  margin-bottom: 1rem !important;
+  padding-bottom: 0 !important;
+}
+
+.tts-slide-title::after {
+  display: none !important;
+}
+
+/* ---- Tab Bar ---- */
+.tts-tab-bar {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tts-tab {
+  background: var(--background-primary);
+  color: var(--text-secondary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+
+.tts-tab:hover {
+  background: var(--background-accent);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.tts-tab.is-active {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(32, 156, 238, 0.3);
+}
+
+/* ---- Video Container ---- */
+.tts-video-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tts-panel {
+  display: none;
+}
+
+.tts-panel.is-active {
+  display: block;
+}
+
+.tts-video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  display: block;
+  box-shadow: var(--shadow-md);
+  object-fit: contain;
+}
+
+/* ---- Carousel arrows 和视频垂直居中 ---- */
+#tts-carousel .slider-navigation-previous,
+#tts-carousel .slider-navigation-next {
+  /* 不再相对整个 slide 50% 居中，改为相对视频区域居中 */
+  top: auto !important;
+  bottom: calc(50% - 1.5rem) !important; /* 微调到视频中心 */
+  transform: none !important;
+}
+
+/* 更精确的做法：让 carousel item 内部用 flex 布局使箭头对齐视频 */
+#tts-carousel {
+  position: relative;
+}
+
+#tts-carousel > .slider-container > .slider-body > .slider-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#tts-carousel .slider-navigation-previous,
+#tts-carousel .slider-navigation-next {
+  top: calc(50% + 2.5rem) !important;
+  transform: translateY(-50%) !important;
+}
+
+/* ---- Mobile ---- */
+@media screen and (max-width: 768px) {
+  .tts-tab {
+    padding: 5px 10px;
+    font-size: 0.72rem;
+    border-radius: 6px;
+  }
+
+  .tts-tab-bar {
+    gap: 4px;
+  }
+}
+
+/* ---- Recon Carousel arrows 与视频网格垂直居中 ---- */
+#recon-carousel .slider-navigation-previous,
+#recon-carousel .slider-navigation-next {
+  top: calc(50% - 1.5rem) !important;
+  transform: translateY(-50%) !important;
+}
+
+/* ---- Video Results arrows 与视频垂直居中 ---- */
+#comparison-carousel .slider-navigation-previous,
+#comparison-carousel .slider-navigation-next {
+  top: calc(50% - 3.5rem) !important;
+  transform: translateY(-50%) !important;
+}
+
+/* ---- 所有 carousel 箭头取消 hover 放大/位移 ---- */
+.slider-navigation-previous:hover,
+.slider-navigation-next:hover {
+  transform: translateY(-50%) !important;
+}
